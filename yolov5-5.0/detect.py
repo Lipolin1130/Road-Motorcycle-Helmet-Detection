@@ -14,6 +14,20 @@ from utils.general import check_img_size, check_requirements, check_imshow, non_
 from utils.plots import plot_one_box
 from utils.torch_utils import select_device, load_classifier, time_synchronized
 
+dataObjects = []
+label_mapping = {
+    0.0: 'motorcycle',
+    1.0: 'helmet', 
+    2.0: 'person'
+}
+
+class ModelData:
+    def __init__(self, modelName, x, y, w, h):
+        self.modelName = modelName
+        self.x = x
+        self.y = y
+        self.w = w
+        self.h = h
 
 def detect(save_img=False):
     source, weights, view_img, save_txt, imgsz = opt.source, opt.weights, opt.view_img, opt.save_txt, opt.img_size
@@ -102,6 +116,7 @@ def detect(save_img=False):
 
                 # Write results
                 for *xyxy, conf, cls in reversed(det):
+                    dataObjects.append(ModelData(label_mapping[cls.item()], xyxy[0].item(), xyxy[1].item(), xyxy[2].item(), xyxy[3].item()))
                     if save_txt:  # Write to file
                         xywh = (xyxy2xywh(torch.tensor(xyxy).view(1, 4)) / gn).view(-1).tolist()  # normalized xywh
                         line = (cls, *xywh, conf) if opt.save_conf else (cls, *xywh)  # label format
@@ -114,7 +129,8 @@ def detect(save_img=False):
 
             # Print time (inference + NMS)
             print(f'{s}Done. ({t2 - t1:.3f}s)')
-
+            # for obj in dataObjects:
+            #     print(f"ModelName:{obj.modelName}, x:{obj.x}, y:{obj.y}, w:{obj.w}, h:{obj.h}")
             # Stream results
             if view_img:
                 cv2.imshow(str(p), im0)
@@ -148,15 +164,16 @@ def detect(save_img=False):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--weights', nargs='+', type=str, default='D:\\Project\\Road Motorcycle Helmet Detection\\yolov5-5.0\\runs\\train\\exp6\\weights\\best.pt', help='model.pt path(s)')
-    parser.add_argument('--source', type=str, default='D:\\Project\\Road Motorcycle Helmet Detection\\VOCdevkit\\TestData', help='source')  # file/folder, 0 for webcam
+    parser.add_argument('--weights', nargs='+', type=str, default='D:\\Project\\Road Motorcycle Helmet Detection\\best.pt', help='model.pt path(s)')
+    parser.add_argument('--source', type=str, default='https://cctv.bote.gov.taipei:8501/MJPEG/374', help='source')  # file/folder, 0 for webcam
     parser.add_argument('--img-size', type=int, default=640, help='inference size (pixels)')
     parser.add_argument('--conf-thres', type=float, default=0.25, help='object confidence threshold')
     parser.add_argument('--iou-thres', type=float, default=0.45, help='IOU threshold for NMS')
     parser.add_argument('--device', default='', help='cuda device, i.e. 0 or 0,1,2,3 or cpu')
-    parser.add_argument('--view-img', action='store_true', help='display results')
-    parser.add_argument('--save-txt', action='store_true', help='save results to *.txt')
-    parser.add_argument('--save-conf', action='store_true', help='save confidences in --save-txt labels')
+    parser.add_argument('--view-img', default=True, action='store_true', help='display results')
+    parser.add_argument('--save-txt', default=True,  action='store_true', help='save results to *.txt')
+    parser.add_argument('--save-conf', default=True, action='store_true', help='save confidences in --save-txt labels')
+    parser.add_argument('--save-crop', default=True, action='store_true', help='save cropped prediction boxes')
     parser.add_argument('--nosave', action='store_true', help='do not save images/videos')
     parser.add_argument('--classes', nargs='+', type=int, help='filter by class: --class 0, or --class 0 2 3')
     parser.add_argument('--agnostic-nms', action='store_true', help='class-agnostic NMS')
@@ -164,6 +181,8 @@ if __name__ == '__main__':
     parser.add_argument('--update', action='store_true', help='update all models')
     parser.add_argument('--project', default='runs/detect', help='save results to project/name')
     parser.add_argument('--name', default='exp', help='save results to project/name')
+    # parser.add_argument('--scale', type=float, default=1.0, help='scale factor for display (e.g., 0.5 for 50% scale)')
+    parser.add_argument('--half', default=True, action='store_true', help='use FP16 half-precision inference')
     parser.add_argument('--exist-ok', action='store_true', help='existing project/name ok, do not increment')
     opt = parser.parse_args()
     print(opt)

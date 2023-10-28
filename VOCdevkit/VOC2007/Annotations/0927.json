@@ -1,0 +1,61 @@
+{
+  "version": "5.2.0.post4",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "rider",
+      "points": [
+        [
+          611.9310344827586,
+          1089.4482758620688
+        ],
+        [
+          1460.2068965517242,
+          2441.1724137931033
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {}
+    },
+    {
+      "label": "helmet",
+      "points": [
+        [
+          932.6206896551723,
+          1092.896551724138
+        ],
+        [
+          1108.4827586206895,
+          1196.3448275862067
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {}
+    },
+    {
+      "label": "helmet",
+      "points": [
+        [
+          956.7586206896551,
+          1137.7241379310344
+        ],
+        [
+          1205.0344827586207,
+          1389.4482758620688
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {}
+    }
+  ],
+  "imagePath": "..\\JPEGImages\\0927.jpg",
+  "imageData": null,
+  "imageHeight": 3072,
+  "imageWidth": 2048
+}

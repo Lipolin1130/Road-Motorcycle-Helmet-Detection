@@ -1,0 +1,248 @@
+{
+  "version": "5.2.0.post4",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "rider",
+      "points": [
+        [
+          522.2727272727273,
+          411.5
+        ],
+        [
+          574.5454545454545,
+          556.9545454545455
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {}
+    },
+    {
+      "label": "rider",
+      "points": [
+        [
+          345.0,
+          436.5
+        ],
+        [
+          406.36363636363643,
+          516.0454545454546
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {}
+    },
+    {
+      "label": "rider",
+      "points": [
+        [
+          231.36363636363637,
+          493.3181818181818
+        ],
+        [
+          292.72727272727275,
+          561.5
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {}
+    },
+    {
+      "label": "rider",
+      "points": [
+        [
+          201.81818181818187,
+          554.6818181818182
+        ],
+        [
+          276.81818181818187,
+          700.1363636363636
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {}
+    },
+    {
+      "label": "rider",
+      "points": [
+        [
+          479.09090909090907,
+          950.1363636363636
+        ],
+        [
+          617.7272727272727,
+          1206.9545454545455
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {}
+    },
+    {
+      "label": "rider",
+      "points": [
+        [
+          833.6363636363637,
+          1027.409090909091
+        ],
+        [
+          1167.7272727272727,
+          1572.8636363636365
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {}
+    },
+    {
+      "label": "rider",
+      "points": [
+        [
+          481.36363636363643,
+          950.1363636363636
+        ],
+        [
+          954.0909090909092,
+          1672.8636363636365
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {}
+    },
+    {
+      "label": "helmet",
+      "points": [
+        [
+          365.4545454545455,
+          443.3181818181818
+        ],
+        [
+          395.00000000000006,
+          479.6818181818182
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {}
+    },
+    {
+      "label": "helmet",
+      "points": [
+        [
+          249.54545454545456,
+          502.4090909090909
+        ],
+        [
+          281.3636363636364,
+          531.9545454545455
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {}
+    },
+    {
+      "label": "helmet",
+      "points": [
+        [
+          226.81818181818187,
+          554.6818181818182
+        ],
+        [
+          263.1818181818182,
+          586.5
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {}
+    },
+    {
+      "label": "helmet",
+      "points": [
+        [
+          863.1818181818182,
+          1102.409090909091
+        ],
+        [
+          915.4545454545455,
+          1168.3181818181818
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {}
+    },
+    {
+      "label": "helmet",
+      "points": [
+        [
+          899.5454545454547,
+          1025.1363636363637
+        ],
+        [
+          1004.0909090909092,
+          1143.3181818181818
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {}
+    },
+    {
+      "label": "helmet",
+      "points": [
+        [
+          526.8181818181818,
+          954.6818181818182
+        ],
+        [
+          572.2727272727273,
+          1000.1363636363636
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {}
+    },
+    {
+      "label": "helmet",
+      "points": [
+        [
+          565.4545454545455,
+          961.5
+        ],
+        [
+          729.090909090909,
+          1127.409090909091
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {}
+    }
+  ],
+  "imagePath": "..\\JPEGImages\\1121.jpg",
+  "imageData": null,
+  "imageHeight": 2048,
+  "imageWidth": 1365
+}
