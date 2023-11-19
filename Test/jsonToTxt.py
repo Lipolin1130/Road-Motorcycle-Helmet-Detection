@@ -58,8 +58,8 @@ def decode_json(json_floder_path, txt_outer_path, json_name):
                 bb = (x1, y1, x2, y2)
             bbox = convert((img_w, img_h), bb)
             try:
-                # f.write(str(name2id[label_name]) + " " + " ".join([str(a) for a in bbox]) + '\n')
-                f.write(str(name2id[label_name]) + " " + " ".join([str(a) for a in bbox]) + ' ' + os.path.splitext(json_name)[0] + '_' + str(count) + '.jpg' + '\n')
+                f.write(str(name2id[label_name]) + " " + " ".join([str(a) for a in bbox]) + '\n')
+                # f.write(str(name2id[label_name]) + " " + " ".join([str(a) for a in bbox]) + ' ' + os.path.splitext(json_name)[0] + '_' + str(count) + '.jpg' + '\n')
             except:
                 pass
 

@@ -7,12 +7,12 @@ all_file_name = os.listdir(dir_path)
 # print(all_file_name)
 print(dir_path)
 
-n = 1
+n = 1842
 for i in all_file_name:
     if i == 'changeFileName.py':
         continue
-    print(dir_path +'\\'+ f'{n:04d}.txt')
-    os.rename(dir_path + '\\' +i, dir_path + '\\' +f'{n:04d}.txt')
+    print(dir_path +'\\'+ f'{n:04d}.jpg')
+    os.rename(dir_path + '\\' +i, dir_path + '\\' +f'{n:04d}.jpg')
     n = n + 1
 
 # for i in all_file_name:

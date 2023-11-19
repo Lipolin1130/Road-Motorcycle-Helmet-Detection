@@ -29,7 +29,7 @@ class ModelData:
         self.w = w
         self.h = h
 
-def detect(save_img=False):
+def detect(save_img=True):
     source, weights, view_img, save_txt, imgsz = opt.source, opt.weights, opt.view_img, opt.save_txt, opt.img_size
     save_img = not opt.nosave and not source.endswith('.txt')  # save inference images
     webcam = source.isnumeric() or source.endswith('.txt') or source.lower().startswith(
@@ -164,12 +164,13 @@ def detect(save_img=False):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--weights', nargs='+', type=str, default='D:\\Project\\Road Motorcycle Helmet Detection\\best.pt', help='model.pt path(s)')
-    parser.add_argument('--source', type=str, default='https://cctv.bote.gov.taipei:8501/MJPEG/374', help='source')  # file/folder, 0 for webcam
+    parser.add_argument('--weights', nargs='+', type=str, default='D:\\Project\\Road Motorcycle Helmet Detection\\RUN_result\\exp10\\weights\\best.pt', help='model.pt path(s)')
+    parser.add_argument('--source', type=str, default="https://cctv.bote.gov.taipei:8501/MJPEG/374?t=0.5374854129090121", help='source')  # file/folder, 0 for webcam
+    # https://cctv.bote.gov.taipei:8501/MJPEG/374
     parser.add_argument('--img-size', type=int, default=640, help='inference size (pixels)')
     parser.add_argument('--conf-thres', type=float, default=0.25, help='object confidence threshold')
     parser.add_argument('--iou-thres', type=float, default=0.45, help='IOU threshold for NMS')
-    parser.add_argument('--device', default='', help='cuda device, i.e. 0 or 0,1,2,3 or cpu')
+    parser.add_argument('--device', default='0', help='cuda device, i.e. 0 or 0,1,2,3 or cpu')
     parser.add_argument('--view-img', default=True, action='store_true', help='display results')
     parser.add_argument('--save-txt', default=True,  action='store_true', help='save results to *.txt')
     parser.add_argument('--save-conf', default=True, action='store_true', help='save confidences in --save-txt labels')
