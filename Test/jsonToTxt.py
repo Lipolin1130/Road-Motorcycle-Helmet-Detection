@@ -64,8 +64,8 @@ def decode_json(json_floder_path, txt_outer_path, json_name):
                 pass
 
 if __name__ == "__main__":
-    json_folder_path = 'D:\Project\Road Motorcycle Helmet Detection\VOCdevkit\VOC2007\Annotations' #存放json的文件夹的绝对路径
-    txt_outer_path='D:\Project\Road Motorcycle Helmet Detection\VOCdevkit\VOC2007\YOLOLables\\' #存放txt的文件夹绝对路径
+    json_folder_path = 'VOCdevkit\VOC2007\Annotations\\' #存放json的文件夹的绝对路径
+    txt_outer_path='VOCdevkit\VOC2007\YOLOLables\\' #存放txt的文件夹绝对路径
     json_names = os.listdir(json_folder_path)
     print("共有：{} 個文件待轉化".format(len(json_names)))
     flagcount = 0
