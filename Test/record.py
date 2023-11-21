@@ -3,7 +3,7 @@ import datetime
 import time
 
 # 設定連結
-video_url = "https://cctv.bote.gov.taipei:8501/MJPEG/374?t=0.5374854129090121"
+video_url = "https://cctv.bote.gov.taipei:8501/MJPEG/157?t=0.4947345277427502"
 
 recording_duration = 15 * 60  # 15分鐘
 

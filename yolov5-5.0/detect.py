@@ -164,8 +164,8 @@ def detect(save_img=True):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--weights', nargs='+', type=str, default='D:\\Project\\Road Motorcycle Helmet Detection\\RUN_result\\exp10\\weights\\best.pt', help='model.pt path(s)')
-    parser.add_argument('--source', type=str, default="https://cctv.bote.gov.taipei:8501/MJPEG/374?t=0.5374854129090121", help='source')  # file/folder, 0 for webcam
+    parser.add_argument('--weights', nargs='+', type=str, default='D:\\Project\\Road Motorcycle Helmet Detection\\best.pt', help='model.pt path(s)')
+    parser.add_argument('--source', type=str, default="https://cctv.bote.gov.taipei:8501/MJPEG/157?t=0.4947345277427502", help='source')  # file/folder, 0 for webcam
     # https://cctv.bote.gov.taipei:8501/MJPEG/374
     parser.add_argument('--img-size', type=int, default=640, help='inference size (pixels)')
     parser.add_argument('--conf-thres', type=float, default=0.25, help='object confidence threshold')
