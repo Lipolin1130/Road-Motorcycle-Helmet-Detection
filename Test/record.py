@@ -5,7 +5,7 @@ import time
 # 設定連結
 video_url = "https://cctv.bote.gov.taipei:8501/MJPEG/157"
 
-recording_duration = 1 * 60 * 3  # 15分鐘
+recording_duration = 1 * 60 * 3.25  # 15分鐘
 
 # 設定影片存儲資料夾
 output_folder = "D:\\Project\\Road Motorcycle Helmet Detection\\Test\\videos"
@@ -54,7 +54,7 @@ while True:
                 time_lost = time.time()
             print("Connection lost, reconnecting...")
             cap.release()
-            time.sleep(0.1)
+            time.sleep(0.01)
             cap = cv2.VideoCapture(video_url)
             continue
         
